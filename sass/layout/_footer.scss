@@ -3,12 +3,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    & .container {
-        display: flex;
-        align-items: baseline;
-    
-    }
-
     & .social-list__link {
         background-color: rgba(255, 255, 255, 0.1);
     }
@@ -28,13 +22,13 @@
 }
 
 .postal-address {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     @include font(14px, 1.71, 0.03em);
     color: #ffffff;
 }
 
 .address-list__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .address-list__link {
@@ -48,12 +42,7 @@
     }
 }
 
-
-.footer__social-list {
-    margin-left: 70px;
-}
-
-.footer__social-list-text {
+.footer__social-block-text {
     margin-bottom: 20px;
     font-weight: 700;
     @include font(14px, 1.14, 0.03em);
@@ -66,10 +55,6 @@
     background-color: var(--accent-text-color);
 }
 
-.footer-form-wrapper {
-    margin-left: auto;
-}
-
 .footer-form__text {
     margin-bottom: 20px;
     font-weight: 700;
@@ -78,14 +63,8 @@
     color: var(--alternative-text-color);
 }
 
-.footer-form__input-wrapper {
-    display: flex;
-}
-
 .footer-form__input {
-    width: 358px;
     height: 50px;
-    margin-right: 12px;
     padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -127,4 +106,81 @@
 
 .footer-btn__icon {
     fill: var(--alternative-text-color);
+}
+
+// 0px - 1199px
+@media screen and (max-width: 1199px) {
+    .footer-form__input {
+        width: 450px;
+        margin-bottom: 20px;
+    }
+
+    .footer__adress-list {
+        text-align: center;
+    }
+
+    .footer__social-block {
+        text-align: center;
+    }
+
+    .footer .social-list {
+        justify-content: center;
+    }
+
+    .footer-form {
+        text-align: center;
+    }
+
+    .footer-form__input-wrapper {
+        text-align: center;
+    }
+
+    .footer-btn {
+        margin: 0 auto;
+    }
+
+    .footer__adress-list,
+    .footer__social-block {
+        margin-bottom: 60px;
+    }
+}
+
+// 768px +
+@media screen and (min-width: 768px) {
+    .footer {
+        & .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+    }
+}
+
+// 1200px +
+@media screen and (min-width: 1200px) {
+    .footer {
+        & .container {
+            display: flex;
+            align-items: baseline;
+    
+        }
+    }
+
+    .footer__social-block {
+        margin-left: 70px;
+    }
+
+    .footer-form-wrapper {
+        margin-left: auto;
+    }
+
+    .footer-form__input-wrapper {
+        display: flex;
+    }
+
+    .footer-form__input {
+        width: 358px;
+        margin-right: 12px;
+    }
 }

@@ -1,8 +1,12 @@
 .title {
     margin-bottom: 50px;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+    @include font(36px, 1.17, 0.03em);
     text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+    .title {
+        @include font(28px, 1.18, 0.03em)
+    }
 }

@@ -93,10 +93,7 @@
     display: block;
     margin-bottom: 4px;
     color: var(--secondary-text-color);
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-
+    @include font(12px, 1.17, 0.01em);
 }
 
 .contact-form__icon {
@@ -146,7 +143,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 20px; */
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.71;
@@ -179,4 +175,19 @@
     display: block;
     margin: 0 auto;
     padding: 10px 56px;
+}
+
+// 0px - 1199px
+@media screen and (max-width: 1199px) {
+    .modal {
+        width: 450px;
+    }
+
+    .contact-form__text {
+        line-height: 1.5;
+    }
+
+    .contact-form__checkbox-label {
+        @include font(12px, 1.17, 0.03em);
+    }
 }
