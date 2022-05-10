@@ -111,27 +111,10 @@
 // 0px - 1199px
 @media screen and (max-width: 1199px) {
     .footer-form__input {
-        width: 450px;
         margin-bottom: 20px;
     }
 
-    .footer__adress-list {
-        text-align: center;
-    }
-
-    .footer__social-block {
-        text-align: center;
-    }
-
-    .footer .social-list {
-        justify-content: center;
-    }
-
-    .footer-form {
-        text-align: center;
-    }
-
-    .footer-form__input-wrapper {
+    .footer__adress-list, .footer__social-block, .footer-form {
         text-align: center;
     }
 
@@ -145,6 +128,13 @@
     }
 }
 
+// 0px - 767px
+@media screen and (max-width: 767px) {
+    .footer-form__input {
+        width: 100%;
+    }
+}
+
 // 768px +
 @media screen and (min-width: 768px) {
     .footer {
@@ -154,6 +144,10 @@
             justify-content: space-around;
             align-items: baseline;
         }
+    }
+
+    .footer-form__input {
+        width: 450px;
     }
 }
 

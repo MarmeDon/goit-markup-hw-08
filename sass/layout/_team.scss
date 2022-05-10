@@ -23,10 +23,15 @@
     background-color: #fff;
 }
 
+.team-list__content-wrapper {
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
 // 0px - 767px
 @media screen and (max-width: 767px) {
-    .team-list__content-wrapper {
-        padding: 30px 122px 24px 122px;
+    .team-list__card:not(:last-child) {
+        margin-bottom: 30px;
     }
 }
 
@@ -44,10 +49,6 @@
         margin-left: 30px;
         margin-top: 30px;
     }
-
-    .team-list__content-wrapper {
-        padding: 30px 74px 24px 74px;
-    }
 }
 
 // 1200px +
@@ -59,6 +60,6 @@
     }
 
     .team-list__content-wrapper {
-        padding: 30px 32px;
+        padding-bottom: 30px;
     }
 }
